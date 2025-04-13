@@ -29,7 +29,7 @@ public class Carnivoro extends Mamifero {
     @Override
     public double calcularCantidadDeComida() {
         double porcentajeASumar = peso > pesoMaximo ? porcentajeExtra : 0;
-        double comida = peso * (especie.getPorcentajePesoCarnivoro() + porcentajeASumar);
-        return comida;
+        double cantidadComida = peso * especie.getPorcentajePesoCarnivoro() * (1 + porcentajeASumar);
+        return cantidadComida;
     }
 }
