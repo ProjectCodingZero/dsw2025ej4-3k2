@@ -53,7 +53,7 @@ public class Persistencia {
         return animales;
     }
 
-    public static ArrayList<Sector> getSectores() {
+        public static ArrayList<Sector> getSectores() {
         return sectores;
     }
 
@@ -67,5 +67,8 @@ public class Persistencia {
             total += animal.TieneAlimentacion(tipoAlimentacion) ? animal.calcularCantidadDeComida() : 0;
         }
         return total;
+    }
+    public static void agregarAnimal(Mamifero mamifero){
+        animales.add(mamifero);
     }
 }
