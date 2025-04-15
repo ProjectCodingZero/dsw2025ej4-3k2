@@ -12,5 +12,8 @@ public class Program {
         Persistencia.inicializar();
         ListarAnimalesView view = new ListarAnimalesView();
         view.setVisible(true);
+        data.Persistencia.inicializar(); // borra animales generados por código
+        views.IngresoAnimalView.mostrarFormulario(); // agrega uno nuevo
+
     }
 }

@@ -13,6 +13,8 @@ import javax.swing.table.DefaultTableModel;
  */
 public class ListarAnimalesView extends javax.swing.JFrame {
 
+    Object VistaAnimalSimple;
+
     /**
      * Creates new form ListarAnimalesView
      */

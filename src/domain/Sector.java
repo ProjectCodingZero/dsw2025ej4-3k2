@@ -8,7 +8,6 @@ public class Sector {
     private double latitud;
     private double longitud;
     private int limite;
-
     private TipoAlimentacion tipoAlimentacion;
     private Empleado empleado;
     private ArrayList<Mamifero> animales = new ArrayList<>();
@@ -23,11 +22,12 @@ public class Sector {
         this.empleado = empleado;
     }
 
-
     public void agregarAnimal(Mamifero mamifero) throws IllegalArgumentException, InvalidPropertiesFormatException {
         if(mamifero == null) throw new IllegalArgumentException();
-        if(mamifero.getTipoAlimentacion() != this.tipoAlimentacion) throw new InvalidPropertiesFormatException("El sector no admite el animal");
-        if(animales.size() == limite) throw new InvalidPropertiesFormatException("El sector no admite más animales");
+        if(mamifero.getTipoAlimentacion() != this.tipoAlimentacion)
+            throw new InvalidPropertiesFormatException("El sector no admite el animal");
+        if(animales.size() == limite)
+            throw new InvalidPropertiesFormatException("El sector no admite más animales");
         animales.add(mamifero);
     }
 
@@ -50,7 +50,15 @@ public class Sector {
     public Empleado getEmpleado() {
         return empleado;
     }
-    public TipoAlimentacion getTipoAlimentacion() {return tipoAlimentacion;}
+    
+    public TipoAlimentacion getTipoAlimentacion() {
+        return tipoAlimentacion;
+    }
+    
+    // Método corregido: retorna el tipo de alimentación del sector
+    public TipoAlimentacion getTipo() {
+        return this.tipoAlimentacion;
+    }
 
     @Override
     public String toString(){
