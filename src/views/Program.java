@@ -11,6 +11,8 @@ public class Program {
     public static void main(String[] args) throws IllegalArgumentException, InvalidPropertiesFormatException {
         Persistencia.inicializar();
         ListarAnimalesView view = new ListarAnimalesView();
+        AltaAnimalViewModel view2 = new AltaAnimalViewModel();
+        view2.setVisible(true);
         view.setVisible(true);
     }
 }
