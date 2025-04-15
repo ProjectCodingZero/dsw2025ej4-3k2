@@ -14,5 +14,8 @@ public class Program {
         AltaAnimalViewModel view2 = new AltaAnimalViewModel();
         view2.setVisible(true);
         view.setVisible(true);
+        data.Persistencia.inicializar(); // borra animales generados por código
+        views.IngresoAnimalView.mostrarFormulario(); // agrega uno nuevo
+
     }
 }
